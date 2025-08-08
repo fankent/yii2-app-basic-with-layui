@@ -1,5 +1,6 @@
 <?php
 
+use app\components\CustomErrorHandler;
 use yii\bootstrap5\BootstrapAsset;
 use yii\bootstrap5\BootstrapPluginAsset;
 use yii\web\JqueryAsset;
@@ -35,6 +36,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
+            'class' => CustomErrorHandler::class,
             'errorAction' => 'site/error',
         ],
         'mailer' => [
